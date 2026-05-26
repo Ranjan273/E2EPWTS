@@ -9,4 +9,6 @@ test("launch the application and click on login button", async ({ page }) => {
     await expect(loginText).toHaveText("Login");
     await page.close();
 });
+
+
     
