@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test("launch the application and click on login button", async ({ page }) => {
+test("[Launch] launch the application and click on login button", async ({ page }) => {
     const url = "https://automationexercise.com/";
     await page.goto(url);
     await expect(page).toHaveURL(url);
