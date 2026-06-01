@@ -1,11 +1,11 @@
 import { test , expect } from "@playwright/test"
 
-test("Click on register and redirect to redirect to registration page", async({page})=>{
+test("[Registration] Click on register and redirect to redirect to registration page", async({page})=>{
 
     const url = "https://automationexercise.com/";
     await page.goto(url);
 
-    await expect(page).toHaveURL('https://automationexercise.com/');
+    await expect(page).toHaveURL(url);
     const loginLink = page.locator('a[href="/login"]');
     await loginLink.click();
 
@@ -92,6 +92,15 @@ test("Click on register and redirect to redirect to registration page", async({p
 
     const accountDeletedValidationText = await page.locator("h2[class='title text-center'] b");
     await expect(accountDeletedValidationText).toHaveText('Account Deleted!');
+
+    const continueBtnAfrDlt = await page.getByRole('link', { name: 'Continue' });
+    await continueBtnAfrDlt.click();
+
+    await expect(loginLink).toBeVisible();
+
+    await page.close();
+
+
 
 
 
