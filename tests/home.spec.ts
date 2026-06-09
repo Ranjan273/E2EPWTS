@@ -1,9 +1,10 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from '@playwright/test';
+import loginModuleData from '../data/ui-data/login-module-data.json';
 
 test("[Launch] launch the application and click on login button", async ({ page }) => {
-    const url = "https://automationexercise.com/";
-    await page.goto(url);
-    await expect(page).toHaveURL(url);
+    
+    await page.goto(loginModuleData.url);
+    await expect(page).toHaveURL(loginModuleData.url);
     const pageLogo = await page.locator("img[alt='Website for automation practice']");
     await expect(pageLogo).toBeVisible();
     const loginLink = await page.locator('a[href="/login"]');
