@@ -1,0 +1,9 @@
+{
+    "url" : "https://automationexercise.com/",
+    "email_address" : "ranjan1@gmail.com",
+    "PassWord" : "Pass@1234",
+    "validateLoggedIn_Text" : " Logged in as ",
+    "loginYourAcc_Text" : "Login to your account",
+    "invalid_Email_Address" : "ranjan19876543234567@gmail.com",
+    "Invalid_cred_Inline_Error_text" : "Your email or password is incorrect!"
+}
