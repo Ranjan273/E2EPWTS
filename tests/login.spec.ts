@@ -11,7 +11,7 @@ test.describe('Invalid/Valid login test',{
 
 test('[Login] Login User with correct email and password',async({page})=>{
     
-    await page.goto(loginModuleData.url);
+    await page.goto('');
 
     await expect(page).toHaveURL(loginModuleData.url);
     const loginLink = page.locator('a[href="/login"]');
@@ -47,7 +47,7 @@ test('[Login] Login User with correct email and password',async({page})=>{
 
 test('[Login] Login User with incorrect email and password',async ({page})=>{
 
-    await page.goto(loginModuleData.url);
+    await page.goto('');
 
     await expect(page).toHaveURL(loginModuleData.url);
     const loginLink = page.locator('a[href="/login"]');
